@@ -50,7 +50,7 @@
 }
 
 .h4 {
-  margin-bottom: 15px;
+  line-height: 30px;
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: darkslategray;
   text-shadow: 2px 1px rgba(255, 188, 63, 0.75);

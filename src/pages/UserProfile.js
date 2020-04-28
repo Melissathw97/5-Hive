@@ -48,7 +48,7 @@ const UserProfile = ({ users, setUsers }) => {
         <Row>
           {users.map((user, index) => {
             return (
-              <Col key={index} xs="6" md="4">
+              <Col key={index} xs="6" md="12">
                 <Button className={styles.eachUser}>
                   <div className={styles.line1}></div>
                   <div className={styles.line2}></div>
@@ -110,7 +110,6 @@ const UserProfile = ({ users, setUsers }) => {
           })}
         </Row>
       </Container>
-      {/* <NavBar /> */}
     </div>
   );
 };

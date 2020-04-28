@@ -11,7 +11,6 @@ import UploadPage from "./pages/UploadPage";
 import LoginForm from "./components/LoginForm";
 import SignUpForm from "./components/SignUpForm";
 import MentorForm from "./components/MentorForm";
-import TestHomePage from "./pages/TestHomePage";
 import { ChatkitProvider, TokenProvider } from "@pusher/chatkit-client-react";
 import Chat from "./pages/Chat";
 import ChatUserList from "./pages/ChatUserList";
@@ -155,48 +154,33 @@ function App() {
                       <Route path="/challenges">
                         <Challenges />
                       </Route>
-                      <TransitionGroup>
-                        <CSSTransition
-                          key={location.key}
-                          timeout={1000}
-                          classNames="chat"
-                        >
-                          <Switch location={location}>
-                            <Route path="/chat">
-                              <div className="page">
-                                <div className="App__chatframe">
-                                  <div className="App__chatwindow">
-                                    <ChatkitProvider
-                                      instanceLocator={instanceLocator}
-                                      tokenProvider={tokenProvider}
-                                      userId={userId}
-                                    >
-                                      {/* <ChatUserList userId={userId} /> */}
-                                      <Chat otherUserId={otherUserId} />
-                                    </ChatkitProvider>
-                                  </div>
-                                </div>
-                              </div>
-                            </Route>
-                            <Route path="/chatlist">
-                              <div className="page">
-                                {/* <div className="App__chatframe"> */}
-                                {/* <div className="App__chatwindow"> */}
-                                <ChatkitProvider
-                                  instanceLocator={instanceLocator}
-                                  tokenProvider={tokenProvider}
-                                  userId={userId}
-                                >
-                                  <ChatUserList userId={userId} />
-                                  {/* <Chat otherUserId={otherUserId} /> */}
-                                </ChatkitProvider>
-                              </div>
-                              {/* </div> */}
-                              {/* </div> */}
-                            </Route>
-                          </Switch>
-                        </CSSTransition>
-                      </TransitionGroup>
+                      <Route path="/chat">
+                        <div className="page">
+                          <div className="App__chatframe">
+                            <div className="App__chatwindow">
+                              <ChatkitProvider
+                                instanceLocator={instanceLocator}
+                                tokenProvider={tokenProvider}
+                                userId={userId}
+                              >
+                                {/* <ChatUserList userId={userId} /> */}
+                                <Chat otherUserId={otherUserId} />
+                              </ChatkitProvider>
+                            </div>
+                          </div>
+                        </div>
+                      </Route>
+                      <Route path="/chatlist">
+                        <div className="page">
+                          <ChatkitProvider
+                            instanceLocator={instanceLocator}
+                            tokenProvider={tokenProvider}
+                            userId={userId}
+                          >
+                            <ChatUserList userId={userId} />
+                          </ChatkitProvider>
+                        </div>
+                      </Route>
                       <Route path="/myprofile">
                         <MyProfilePage loggedUser={loggedUser} myinfo={myinfo} setmyinfo={setmyinfo} />
                       </Route>
@@ -210,9 +194,10 @@ function App() {
               </Route>
             </Switch>
           </CSSTransition>
-        </TransitionGroup>
-      )} />
-    </div>
+        </TransitionGroup >
+      )
+      } />
+    </div >
   );
 }
 
