@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import axios from "axios";
 import styles from "./MainPage.module.css";
-import { NavLink as Link, useHistory } from "react-router-dom";
+import { NavLink as Link } from "react-router-dom";
 import { Button } from "reactstrap";
 import Hive from "../assets/images/5-hive.png";
 import Image from "react-graceful-image";
