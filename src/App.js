@@ -7,7 +7,7 @@ import MainPage from "./pages/MainPage";
 import MyProfilePage from "./pages/MyProfilePage";
 import UserProfile from "./pages/UserProfile";
 import Challenges from "./pages/Challenges";
-import UploadPage from "./pages/UploadPage";
+// import UploadPage from "./pages/UploadPage";
 import LoginForm from "./components/LoginForm";
 import SignUpForm from "./components/SignUpForm";
 import MentorForm from "./components/MentorForm";
@@ -19,7 +19,6 @@ import Match from "./pages/Match";
 import axios from "axios";
 import { Route, useHistory, Switch } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-import { Navbar } from "reactstrap";
 // import { ToastContainer, toast } from "react-toastify";
 // import Image from "react-graceful-image";
 
@@ -38,7 +37,7 @@ function App() {
   const [passwordInput, setpasswordInput] = useState("");
   const [loggedUser, setloggedUser] = useState("");
   const [myinfo, setmyinfo] = useState({});
-  const urlParams = new URLSearchParams(window.location.search);
+  // const urlParams = new URLSearchParams(window.location.search);
   const userId = "ridza";
   const otherUserId = "matt";
 

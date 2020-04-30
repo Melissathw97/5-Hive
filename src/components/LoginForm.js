@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./LoginForm.module.css";
-import { Form, FormGroup, Label, Button, Input } from "reactstrap";
+import { Form, FormGroup, Button } from "reactstrap";
 import { NavLink as Link } from "react-router-dom";
 import Hive from "../assets/images/5-hive.png";
 import Image from "react-graceful-image";
@@ -44,14 +44,14 @@ const LoginForm = ({
         <p>Sign up as:</p>
         <div className={styles.buttons}>
           <Button tag={Link} to="/signup" style={{ backgroundColor: "transparent", padding: "0", border: "transparent" }}>
-            <a className={styles.userBtn}>
+            <div className={styles.userBtn}>
               <span className="hb hb-sm">USER</span>
-            </a>
+            </div>
           </Button>
           <span className={styles.span}>OR</span>
-          <a className={styles.mentorBtn} href="#">
+          <div className={styles.mentorBtn}>
             <span className="hb hb-sm">MENTOR</span>
-          </a>
+          </div>
         </div>
       </div>
     </div>

@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import NavBar from "../components/NavBar";
 import { Col, Button, Container, Row } from "reactstrap";
 import Image from "react-graceful-image";
 import defaultImage from "../assets/images/default-profile.png";
@@ -23,7 +22,7 @@ const UserProfile = ({ users, setUsers }) => {
   useEffect(() => {
     axios({
       method: "get",
-      url: "http://fivehive.herokuapp.com/api/v1/users/info/show",
+      url: "https://fivehive.herokuapp.com/api/v1/users/info/show",
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(result => {
@@ -56,14 +55,14 @@ const UserProfile = ({ users, setUsers }) => {
                   <div className={styles.line4}></div>
                   <div className={styles.picIcon}>
                     <Image src={defaultImage} className={styles.profilePic} />
-                    <a className={styles.icon}>
+                    <div className={styles.icon}>
                       <span className="hb hb-sm">
                         <i
-                          class="fas fa-mars"
+                          className="fas fa-mars"
                           style={{ color: "lightblue" }}
                         ></i>
                       </span>
-                    </a>
+                    </div>
                   </div>
                   <h4>{user.username}</h4>
                   <h6>{user.age}</h6>
@@ -84,14 +83,14 @@ const UserProfile = ({ users, setUsers }) => {
                   <div className={styles.line4}></div>
                   <div className={styles.picIcon}>
                     <Image src={defaultImage} className={styles.profilePic} />
-                    <a className={styles.icon}>
+                    <div className={styles.icon}>
                       <span className="hb hb-sm">
                         <i
-                          class="fas fa-mars"
+                          className="fas fa-mars"
                           style={{ color: "lightblue" }}
                         ></i>
                       </span>
-                    </a>
+                    </div>
                   </div>
                   <h4>{user.username}</h4>
                   <h6>{user.age}</h6>

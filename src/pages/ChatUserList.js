@@ -1,6 +1,5 @@
 import React from "react";
 import "./ChatUserList.css";
-import Navbar from "../components/NavBar"
 import defaultAvatar from "../assets/images/default-profile.png";
 import { NavLink as Link } from "react-router-dom"
 import { Button } from "reactstrap"

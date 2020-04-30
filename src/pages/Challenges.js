@@ -23,9 +23,9 @@ const Challenges = () => {
       <div className={styles.fullPage}>
         <div className={styles.hashtagRow}>
           <div className={styles.hashtagTitle}>
-            <a className={styles.hashtag} href="#">
+            <div className={styles.hashtag}>
               <i class={`fas fa-hashtag ${styles.hashtagIcon}`}></i>
-            </a>
+            </div>
             <p>somethinghashtag</p>
           </div>
           <div className={styles.container}>
@@ -45,9 +45,9 @@ const Challenges = () => {
         </div>
         <div className={styles.hashtagRow}>
           <div className={styles.hashtagTitle}>
-            <a className={styles.hashtag} href="#">
+            <div className={styles.hashtag}>
               <i class={`fas fa-hashtag ${styles.hashtagIcon}`}></i>
-            </a>
+            </div>
             <p>somethinghashtag</p>
           </div>
           <div className={styles.container}>

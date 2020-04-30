@@ -13,7 +13,7 @@ const NavBar = () => {
           className={styles.grid}
           style={{ color: "#cf6f15" }}
         >
-          <i class="fas fa-street-view"></i>
+          <i className="fas fa-street-view"></i>
           <br />
           Nearby
         </Button>
@@ -25,7 +25,7 @@ const NavBar = () => {
           className={styles.grid}
           style={{ color: "#e47915" }}
         >
-          <i class="fas fa-user-friends"></i>
+          <i className="fas fa-user-friends"></i>
           <br />
           Match
         </Button>
@@ -51,7 +51,7 @@ const NavBar = () => {
           className={styles.grid}
           style={{ color: "#fcfcfc" }}
         >
-          <i class="fas fa-comments"></i>
+          <i className="fas fa-comments"></i>
           <br />
           Chat
         </Button>
